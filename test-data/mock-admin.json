@@ -1,0 +1,67 @@
+{
+  "admin": {
+    "email": "test-admin@oscaryan.my",
+    "password": "TestPassword123!",
+    "name": "Test Admin",
+    "whitelist": [
+      "oscar@oscaryan.my",
+      "oscaryanwebpages@gmail.com",
+      "test-admin@oscaryan.my"
+    ],
+    "notes": [
+      "DO NOT use these credentials in production",
+      "These are for testing only",
+      "Create a dedicated test admin account in Firebase Auth",
+      "Ensure email is whitelisted in firestore.rules and AdminLogin.tsx"
+    ]
+  },
+  "test_scenarios": {
+    "valid_login": {
+      "email": "oscar@oscaryan.my",
+      "password": "ValidPassword123!",
+      "expected_result": "Login successful, redirect to AdminPanel"
+    },
+    "invalid_password": {
+      "email": "oscar@oscaryan.my",
+      "password": "WrongPassword",
+      "expected_result": "Login failed, error message shown"
+    },
+    "non_whitelisted_email": {
+      "email": "unauthorized@example.com",
+      "password": "AnyPassword123!",
+      "expected_result": "Login blocked, 'not authorized' message"
+    }
+  },
+  "firebase_config": {
+    "notes": [
+      "Use Firebase Emulator for local testing",
+      "Run: firebase emulators:start",
+      "Create test user in Firebase Auth Emulator",
+      "Ensure test admin email is whitelisted"
+    ]
+  },
+  "admin_actions": {
+    "create_listing": {
+      "title": "Test Warehouse",
+      "price": 500000,
+      "location": "Test Location",
+      "category": "Industrial",
+      "type": "SALE",
+      "tenure": "Freehold",
+      "landSize": "10000 sq ft",
+      "expected_result": "Listing created, appears in table"
+    },
+    "edit_listing": {
+      "action": "Modify title to 'Updated Test Warehouse'",
+      "expected_result": "Listing updated, changes visible"
+    },
+    "change_status": {
+      "action": "Change from active to inactive",
+      "expected_result": "Status badge changes, listing removed from homepage"
+    },
+    "delete_listing": {
+      "action": "Delete test listing",
+      "expected_result": "Listing removed from table and storage"
+    }
+  }
+}

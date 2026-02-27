@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow admin panel and API endpoints
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api
+
+# Sitemap
+Sitemap: https://oscaryan.my/sitemap.xml

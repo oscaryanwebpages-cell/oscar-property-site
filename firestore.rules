@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is admin
+    function isAdmin() {
+      let adminEmails = ['oscar@oscaryan.my', 'oscaryanwebpages@gmail.com'];
+      return request.auth != null && request.auth.token.email in adminEmails;
+    }
+
+    // Listings collection: Public read, admin write
+    match /listings/{listingId} {
+      // Anyone can read listings
+      allow read: if true;
+
+      // Only admins can create, update, delete listings
+      allow write: if isAdmin();
+    }
+
+    // Agent profile: Public read, admin write
+    match /agentProfile/{document=**} {
+      // Anyone can read agent profile
+      allow read: if true;
+
+      // Only admins can update agent profile
+      allow write: if isAdmin();
+    }
+
+    // Testimonials: Public read, admin write
+    match /testimonials/{testimonialId} {
+      // Anyone can read testimonials
+      allow read: if true;
+
+      // Only admins can create, update, delete testimonials
+      allow write: if isAdmin();
+    }
+
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

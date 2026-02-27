@@ -1,0 +1,179 @@
+# Test URLs for Oscar Yan Property Agent Website
+# Last Updated: 2025-02-14
+#
+# Usage:
+# - Manual testing: Open each URL in different browsers
+# - Automated testing: Import into Playwright/Cypress tests
+# - Lighthouse: Run audit on each URL
+#
+# Replace 'https://oscaryan.my' with local URL during development:
+# Local: http://localhost:5173
+# Staging: https://staging.oscaryan.my (if exists)
+# Production: https://oscaryan.my
+
+# Base URL
+BASE_URL=https://oscaryan.my
+
+# ============================================================================
+# PRIMARY PAGES
+# ============================================================================
+
+# Homepage - Main landing page
+# Tests: Hero, Stats, ListingsGrid, About, Testimonials, Map, Contact
+# Priority: P0
+${BASE_URL}/
+
+# ============================================================================
+# LISTING PAGES
+# ============================================================================
+
+# Listing Detail - Direct URL access
+# Replace {id} with actual listing IDs from mock-listings.json
+# Tests: Modal vs. page view, all multimedia features
+# Priority: P0
+${BASE_URL}/listing/test-listing-commercial-001
+${BASE_URL}/listing/test-listing-industrial-001
+${BASE_URL}/listing/test-listing-land-001
+${BASE_URL}/listing/test-listing-office-001
+${BASE_URL}/listing/test-listing-industrial-002
+${BASE_URL}/listing/test-listing-inactive-001
+${BASE_URL}/listing/test-listing-multimedia-001
+
+# ============================================================================
+# FILTERED PAGES
+# ============================================================================
+
+# Filter by Category (current implementation uses query params)
+# Tests: Filter functionality, URL state
+# Priority: P0
+${BASE_URL}/?category=Commercial
+${BASE_URL}/?category=Industrial
+${BASE_URL}/?category=Land
+${BASE_URL}/?category=Office
+
+# Filter by Type
+# Tests: Type filter functionality
+# Priority: P1
+${BASE_URL}/?type=SALE
+${BASE_URL}/?type=RENT
+
+# Combined Filters
+# Tests: Multiple filters simultaneously
+# Priority: P1
+${BASE_URL}/?category=Industrial&type=SALE
+${BASE_URL}/?category=Commercial&type=RENT
+
+# ============================================================================
+# ADMIN PAGES
+# ============================================================================
+
+# Admin - Login and Admin Panel
+# Tests: Authentication, CRUD operations, AI extraction
+# Priority: P0
+${BASE_URL}/admin
+
+# ============================================================================
+# EDGE CASES & ERROR PAGES
+# ============================================================================
+
+# Invalid Listing ID - Should show 404 or error
+# Tests: Error handling, fallback UI
+# Priority: P1
+${BASE_URL}/listing/invalid-id
+${BASE_URL}/listing/non-existent-listing
+${BASE_URL}/listing/
+
+# Malformed URLs - Should handle gracefully
+# Tests: URL validation, error handling
+# Priority: P2
+${BASE_URL}/listing
+${BASE_URL}/admin/invalid-route
+${BASE_URL}/invalid-route
+
+# ============================================================================
+# MULTIMEDIA TESTS
+# ============================================================================
+
+# Listing with Video - Test video playback
+# Tests: VideoPlayer component, autoplay policies
+# Priority: P0
+${BASE_URL}/listing/test-listing-commercial-001
+
+# Listing with Audio - Test audio playback
+# Tests: AudioPlayer component, autoplay policies
+# Priority: P1
+${BASE_URL}/listing/test-listing-multimedia-001
+
+# Listing with 360° Panorama - Test panorama viewer
+# Tests: Panorama360Viewer component, Three.js
+# Priority: P1
+${BASE_URL}/listing/test-listing-multimedia-001
+
+# Listing with Many Images - Test carousel with many images
+# Tests: ImageCarousel performance, navigation
+# Priority: P1
+${BASE_URL}/listing/test-listing-multimedia-001
+
+# ============================================================================
+# SEO & SOCIAL SHARING
+# ============================================================================
+
+# Test these URLs with:
+# - Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
+# - Twitter Card Validator: https://cards-dev.twitter.com/validator
+# - LinkedIn Post Inspector: https://www.linkedin.com/post-inspector/
+
+${BASE_URL}/
+${BASE_URL}/listing/test-listing-commercial-001
+
+# ============================================================================
+# PERFORMANCE TESTS
+# ============================================================================
+
+# Run Lighthouse on these URLs:
+# npx lighthouse https://oscaryan.my --output=json --output-path=./homepage.json
+# npx lighthouse https://oscaryan.my/listing/test-listing-commercial-001 --output=json --output-path=./listing.json
+
+# ============================================================================
+# MOBILE TESTING
+# ============================================================================
+
+# Test these URLs on mobile devices:
+# - iPhone 12/13/14 (iOS Safari)
+# - Samsung Galaxy (Android Chrome)
+# - iPad (iPadOS Safari)
+
+${BASE_URL}/
+${BASE_URL}/listing/test-listing-multimedia-001
+
+# ============================================================================
+# CROSS-BROWSER TESTING
+# ============================================================================
+
+# Test these URLs in all target browsers:
+# - Chrome (Desktop & Android)
+# - Safari (Desktop & iOS)
+# - Firefox (Desktop)
+# - Edge (Desktop)
+
+${BASE_URL}/
+${BASE_URL}/listing/test-listing-commercial-001
+${BASE_URL}/admin
+
+# ============================================================================
+# API ENDPOINTS (for reference, not browser testing)
+# ============================================================================
+
+# Firebase REST API (for integration testing)
+# GET https://firestore.googleapis.com/v1/projects/{projectId}/databases/(default)/documents/listings
+# GET https://firestore.googleapis.com/v1/projects/{projectId}/databases/(default)/documents/listings/{listingId}
+
+# ============================================================================
+# NOTES
+# ============================================================================
+
+# 1. Update BASE_URL for different environments
+# 2. Replace listing IDs with actual IDs from Firebase
+# 3. Add new URLs as features are added
+# 4. Remove URLs for deprecated features
+# 5. Test both authenticated (admin) and unauthenticated states

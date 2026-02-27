@@ -1,0 +1,391 @@
+# Oscar Yan — 专业房地产网站提案
+
+## 📋 客户简介
+
+| 项目 | 详情 |
+|---|---|
+| **客户** | Oscar Yan |
+| **资质** | 注册房地产经纪人 (REA) — **E 08414** |
+| **监管机构** | 马来西亚估值师、评估师、房地产经纪及物业管理局 (BOVAEA) |
+| **地点** | 马来西亚，新山 (Johor Bahru) |
+| **经验** | 10–20+ 年 |
+| **专长** | 商业地产 · 工业地产 · 农业用地 · 住宅 (别墅 & 地皮) |
+| **当前平台** | PropertyGuru · iProperty |
+| **网站比例** | **20% 个人品牌** + **80% 房源展示** |
+
+---
+
+## 🎯 项目目标
+
+1. **建立专业形象** — 确立 Oscar 作为新山受信赖的 BOVAEA 认证商业地产专家的形象
+2. **房源展示中心** — 集中展示房源，供访客浏览、筛选和咨询
+3. **潜在客户挖掘** — 每个房源页面都设有直接的 WhatsApp / 电话 CTA，以获取咨询
+4. **SEO 曝光** — 针对 "新山商业地产经纪"、"JB 工业地产出售" 等关键词进行优化
+5. **相辅相成** — 本网站与 PropertyGuru / iProperty 并行，而非替代它们
+
+---
+
+## 🏗️ 建议网站架构
+
+```
+oscaryan.my (或类似域名)
+│
+├── 首页 (Hero Section)   ← 全屏介绍 + 标语 + CTA
+├── 关于 / 简介           ← 资质证书、经验、核心价值观
+├── 数据统计栏            ← 从业年限、成交量、房源数量
+├── 房源列表              ← 可筛选网格 (出售 / 出租 标签)
+│   ├── 类型筛选          ← 商业 · 工业 · 农业 · 住宅
+│   ├── 区域筛选          ← 新山 · 士乃 · 乌鲁地南 · 等
+│   └── 房源卡片          ← 图片 · 价格 · 地点 · 类型 · CTA按钮
+├── 客户评价              ← 客户推荐 / 社会证明
+├── 服务覆盖地图          ← 交互式服务区域地图
+├── 联系 / CTA 部分       ← WhatsApp, 电话, 邮件, PropertyGuru 链接
+└── 页脚                  ← BOVAEA 信息, 社交链接, 免责声明
+```
+
+---
+
+## 🎨 设计理念与风格
+
+### 整体方向
+- **商务/企业风** — 深海军蓝 + 银色线条 + 纯白基底
+- 简洁排版 (Inter 或 Outfit 字体)，充足的留白
+- 移动端优先的响应式设计 (马来西亚大部分房产搜索来自移动端)
+- 微妙的视差和滚动动画，营造高级感
+- **设计标准**: 采用 **UI-UX Pro Max** 标准，确保极致的用户体验和视觉冲击力
+
+### 建议配色方案 (Dual-Tone Blue + Silver)
+
+| 角色 | 颜色 | 十六进制 |
+|---|---|---|
+| 主色 (深邃蓝) | 极深背景/主视觉 | `#001731` |
+| 次主色 (海蓝) | 层次感/卡片/交互 | `#0E2C48` |
+| 辅助色 (银色) | 科技感与现代感线条 | `#E5E7EB` |
+| 背景 | 纯净白色 | `#FFFFFF` |
+| 文本 | 高对比度深色 | `#001731` |
+| 弱化文本 | 次要信息 | `#6B7280` |
+| 成功 | 可售标签 | `#10B981` |
+| 警告 | 价格高亮 | `#F59E0B` |
+
+### 排版
+- **标题**: Outfit (现代粗体) 或 Playfair Display (经典奢华)
+- **正文**: Inter (干净易读)
+- **强调**: 等宽字体用于注册号 (如 `E 08414`)
+
+---
+
+## 📄 详细板块拆解
+
+### 1. 首页 / Hero Section (第一印象)
+> **目标**: 立即建立可信度和专业形象
+
+- 全宽背景: 新山天际线或商业区图像
+- 带有微妙渐变覆盖的专业头像
+- **主标题**: "您在新山值得信赖的商业地产专家"
+- **副标题**: "10+ 年专注于商业 · 工业 · 农业地产"
+- **CTA 按钮**: `浏览房源` | `立即 WhatsApp`
+- BOVAEA 徽章 + 注册号 `E 08414` 醒目显示
+
+### 2. 关于 / 简介部分 (20% 品牌)
+> **目标**: 通过资质和个人故事建立信任
+
+#### 2a. 专业摘要
+> Oscar Yan 是一名受马来西亚估值师、评估师及房地产经纪局 (BOVAEA) 认可的注册房地产经纪人 (E 08414)，常驻马来西亚新山。 凭借十多年的行业经验和服务，Oscar 致力于通过提供合适的选择和优质的服务帮助客户实现置业目标 —— 秉持 **礼貌、公平和诚信** 的原则。
+
+#### 2b. 核心价值观展示 (3个图标卡片)
+| 图标 | 价值观 | 描述 |
+|---|---|---|
+| 🤝 | **礼貌 (Courtesy)** | 本着尊重、客户至上的方针 |
+| ⚖️ | **公平 (Fairness)** | 对各方保持透明公正的交易 |
+| 🛡️ | **诚信 (Integrity)** | 遵守所有法案、规则及相关法律 |
+
+#### 2c. 资质徽章
+- BOVAEA 注册房地产经纪人 — E 08414
+- 服务年限
+- 服务覆盖区域地图缩略图
+
+### 3. 数据统计 / 信任指标栏
+> **目标**: 快速浏览的社会证明
+
+| 指标 | 示例值 | 备注 |
+|---|---|---|
+| 从业经验 | 15+ 年 | 动态或静态 |
+| 完成交易 | 200+ | 预计生涯总数 |
+| 在售房源 | 60+ | 可定期更新 |
+| 覆盖区域 | 10+ | 新山及周边区域数 |
+
+### 4. 房源列表部分 (网站的 80%) ⭐
+> **目标**: 这是核心功能 — 可浏览、可筛选的房源展示
+
+#### 4a. 筛选栏
+- **交易类型**: `出售` | `出租` (标签切换)
+- **物业类型**: `商业` | `工业` | `农业` | `住宅` (多选)
+- **地点**: 新山区域下拉菜单 (士乃, 乌鲁地南, Bandar Putra, 等)
+- **价格范围**: 滑块或预设范围
+- **排序**: 最新发布 | 价格从低到高 | 价格从高到低
+
+#### 4b. 房源卡片设计
+每个卡片显示:
+```
+┌────────────────────────────────┐
+│  [房源图片]                    │
+│  ┌──────────┐ ┌──────────┐    │
+│  │ 出售      │ │商业地产  │    │
+│  └──────────┘ └──────────┘    │
+│                                │
+│  RM 2,500,000                  │
+│  士乃 (Senai) 工业用地          │
+│  📐 2.5 英亩  🏢 永久地契      │
+│                                │
+│  [WhatsApp 咨询] [详情]        │
+└────────────────────────────────┘
+```
+
+#### 4c. 房源详情页 (智能多媒体布局)
+> **应用 Frontend-Design Skills 打造动态交互体验**
+
+**布局逻辑**:
+页面布局将根据媒体内容的完整性自动调整 (从右向左优先级):
+1.  **多媒体列表 (Multimedia List)**:
+    -   内容: Oscar 的房源介绍视频 / 音频讲解
+    -   **显示条件**: 仅当有上传视频/音频时显示。
+    -   **位置**: 位于照片/360视图的右侧。
+
+2.  **360° 全景视图 (360 View)**:
+    -   功能: 支持左右上下滑动，沉浸式观察建筑物细节。
+    -   **显示条件**: 当有 360 照片时显示。
+    -   **布局动态**:
+        -   若无多媒体列表 -> 360 视图扩展占据右侧空间。
+        -   若无 360 照片 -> 轮播图扩展。
+
+3.  **图片轮播 (Carousel)**:
+    -   基础展示，始终存在。若无其他媒体，占据主要视觉区域。
+
+**详细功能**:
+-   完整描述 & 关键细节表
+-   地图嵌入
+-   联系 CTA (WhatsApp 预填消息)
+-   PropertyGuru / iProperty 链接 (如有)
+
+#### 4d. 房源数据管理
+
+> [!SUCCESS]
+> **已选择: 选项 C — 管理后台 + 后端 (Firebase + Cloud Run)**
+
+我们将构建一个基于 **Google Cloud** 生态的 Serverless 后端：
+- **数据库**: Firebase Firestore (NoSQL, 实时同步)
+- **认证**: Firebase Authentication (安全登录)
+- **存储**: Firebase Storage (360全景图, 高清图, 视频/音频)
+
+**管理后台 (Admin Panel)**:
+Oscar 可以在受保护的后台进行以下操作：
+- **房源管理**:
+    - 创建/编辑房源 (上传 360 图, 视频, 音频)
+    - 标记 "已售/已租" 或 下架
+- **个人资料管理**:
+    - 更换个人头像 (Headshot)
+    - 更新个人资料 (公司名称, WhatsApp 号码, 简介)
+
+**技术实现 (Fullstack-Developer Skills)**:
+- 前端: React + Vite + Tailwind
+- 后端: Node.js / Go (on Cloud Run) + Firebase SDK
+
+**Firebase 配置**:
+```javascript
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCeF5jYBri17s2--3bpJ5MpIix4kbnK6BU",
+  authDomain: "oscar-property-1cc52.firebaseapp.com",
+  projectId: "oscar-property-1cc52",
+  storageBucket: "oscar-property-1cc52.firebasestorage.app",
+  messagingSenderId: "418694105522",
+  appId: "1:418694105522:web:6b14a8265a9da208fe7cab",
+  measurementId: "G-91Y1NCPK30"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+```
+
+### 5. 客户评价部分
+> **目标**: 来自过往客户的社会证明
+
+- 3–5 条轮播客户引语
+- 客户姓名 + 交易类型 (如需保密可隐藏)
+- 星级评分或简短引语格式
+
+### 6. 服务覆盖地图 ⭐ (重点展示)
+> **目标**: 强视觉冲击功能，展示 Oscar 在新山及周边区域的广泛覆盖
+
+- **视觉效果**: **Google Maps 定制样式** (深色模式以匹配网站风格)
+- **功能**:
+    - **区域高亮**: 用户鼠标悬停在新山、士乃、乌鲁地南等区域时，地图高亮显示
+    - **点击筛选**: 点击地图上的区域，直接筛选出该区域的房源
+    - **地产分布**: 使用不同颜色的图标区分 "商业"、"工业"、"农业" 用地
+- **区域列表**: 新山 (JB Town), 士乃 (Senai), 乌鲁地南 (Ulu Tiram), Bandar Putra, 依斯干达特区 (Iskandar Malaysia)
+
+### 7. 联系 / CTA 部分
+> **目标**: 让客户极易联系到 Oscar
+
+- **WhatsApp** 按钮 (主要，预填消息)
+- **电话** 号码 (移动端可点击拨打)
+- **电子邮件** 地址
+- **PropertyGuru 个人主页** 链接
+- **iProperty 个人主页** 链接
+- 简单联系表单 (姓名, 电话, 感兴趣房产, 留言)
+
+### 8. 页脚
+- BOVAEA 注册信息 (强制合规)
+- 公司名称和注册号
+- 隐私免责声明
+- 版权声明
+- 社交媒体链接 (如有)
+
+---
+
+## 🔒 BOVAEA 合规要求
+
+根据马来西亚法规，网站必须显示以下信息：
+
+| 必需元素 | 值 |
+|---|---|
+| 经纪人姓名 | Oscar Yan |
+| REA 注册号 | E 08414 |
+| 公司名称 | *(待 Oscar 确认)* |
+| 公司 E-注册号 | *(待 Oscar 确认)* |
+| 联系方式 | 电话, 邮箱 |
+| BOVAEA Logo / 徽章 | 必须清晰可见 |
+
+---
+
+## 📱 技术规格
+
+| 方面 | 规格 |
+|---|---|
+| **类型** | 静态单页应用 (SPA 体验) |
+| **技术栈** | HTML + CSS + Vanilla JavaScript |
+| **托管** | **Google Cloud Run** (容器化部署) |
+| **域名** | 客户购买 (例如 `oscaryan.my` 或 `oscaryanproperty.com`) |
+| **图片** | 优化的 WebP 格式，懒加载 |
+| **分析** | Google Analytics 4 + **Microsoft Clarity** (Heatmap) + **Facebook Pixel** |
+| **移动端** | 完全响应式，触控友好 |
+| **性能** | 目标加载时间 < 3秒 |
+| **SEO** | Meta 标签, 结构化数据 (Real Estate Agent schema) |
+
+---
+
+## 🤖 4-Part Agent Execution Strategy (AI 协同开发分工)
+
+本项目的开发将拆分为 **4 个独立的执行包 (Work Packages)**，分别由不同的 AI Agent / 大模型负责，最后集成。
+
+### 📦 Package 1: Frontend Structure & UI/UX
+> **负责 Agent**: Cursor + **Claude 3.5 Sonnet**
+> **目标**: 打造极致视觉与交互体验 (UI-UX Pro Max)
+
+- **任务清单**:
+    1.  **项目脚手架**: Vite + React + Tailwind 配置 (已完成初始化).
+    2.  **组件开发**: 开发基础 UI 组件库 (Button, Card, Modal, Navbar).
+    3.  **静态页面**: Hero Section, About Section, Footer, Contact Form.
+    4.  **响应式适配**: 确保 Mobile/Tablet/Desktop 完美显示.
+    5.  **动画**: 实现滚动视差 (Parallax) 和微交互动画.
+
+### 📦 Package 2: Backend & Infrastructure
+> **负责 Agent**: Claude Code (CLI) + **Claude 3.5 Sonnet**
+> **目标**: 稳健的 Serverless 后端架构
+
+- **任务清单**:
+    1.  **Firebase 初始化**: 配置 Firestore, Auth, Storage.
+    2.  **API 逻辑**: 编写用于获取房源、筛选房源的 Business Logic.
+    3.  **Cloud Run 部署**: 编写 `Dockerfile` 和部署脚本.
+    4.  **Admin API**: 实现增删改查 (CRUD) 的后端接口.
+
+### 📦 Package 3: Complex Logic Core
+> **负责 Agent**: Cursor + **Gemini 1.5 Pro**
+> **目标**: 处理复杂的动态业务逻辑与多媒体交互
+
+- **任务清单**:
+    1.  **智能多媒体布局引擎**: 编写 `MultimediaLayout` 组件，逻辑判断：`if video > 360 > carousel`.
+    2.  **360° Viewer 集成**: 集成 `react-360-view` 或类似库，实现全景图控制.
+    3.  **地图交互**: 实现 Google Maps API 集成，处理多边形高亮与点击筛选逻辑.
+    4.  **状态管理**: 设计全局状态 (Zustand/Context) 管理筛选条件与用户会话.
+
+### 📦 Package 4: Integration, Analytics & Polish
+> **负责 Agent**: Cursor + **Claude 3.5 Sonnet** (General)
+> **目标**: 缝合各个模块，注入分析工具，最终交付
+
+- **任务清单**:
+    1.  **模块集成**: 将 Package 2 的 API 对接到 Package 1 & 3 的界面.
+    2.  **数据埋点**: 注入 GA4, Microsoft Clarity, FB Pixel 代码.
+    3.  **Admin Panel 前端**: 组装 Admin 界面，对接 Auth.
+    4.  **SEO 优化**: 生成 Sitemap, robots.txt, 添加 Meta Tags.
+    5.  **最终测试**: 运行 Lighthouse 测试并修复性能问题.
+
+---
+
+## 📦 我们需要 Oscar 提供的内容
+
+> [!IMPORTANT]
+> 开发前或开发中需要以下项目：
+
+1. **专业头像** — 高分辨率照片 (PropertyGuru 上已有的？)
+2. **公司详情** — BOVAEA 合规所需的公司名称和 E-注册号
+3. **房源数据** — 包含标题、类型、交易类型、价格、地点、面积、地契、描述、照片的电子表格
+4. **客户评价** — 3–5 条客户评价 (可匿名)
+5. **联系偏好** — 首选 WhatsApp 号码，邮箱，首选联系方式
+6. **域名偏好** — 期望的网站网址
+7. **Logo** — 如果 Oscar 有个人品牌 Logo，或者我们设计一个
+8. **照片** — 房产照片 (或提供 PropertyGuru 链接供抓取)
+
+---
+
+## 💡 其他建议
+
+### 速赢策略
+1. **WhatsApp Business 集成** — 预填咨询消息，如 "Hi Oscar, 我对 [房产名称] 感兴趣，请分享更多详情。"
+2. **PropertyGuru 互链** — 每个房源可以链接回 PropertyGuru 房源以获取更多详情 / 验证
+3. **二维码** — 生成网站 URL 二维码，用于名片 / 宣传册
+4. **微信 / 小红书** — 如果目标是中文投资者，考虑添加社交链接
+
+### 未来增强 (MVP 之后)
+1. **博客 / 市场洞察** — 关于新山商业市场趋势的 SEO 丰富内容
+2. **多语言** — 英语 + 中文 (普通话) 以覆盖更广的新山市场
+3. **房源提醒** — 当有新房源符合条件时邮件通知
+4. **虚拟导览** — 高级房源的 360° 房产导览
+5. **分析仪表盘** — 追踪哪些房源获得的咨询最多
+
+---
+
+## ✅ 验证计划
+
+### 浏览器测试
+- 在桌面端 Chrome, Safari, Firefox 上打开网站
+- 在移动端视图 (375px iPhone SE, 390px iPhone 14) 上测试
+- 验证所有交互元素: 筛选器, 模态框, WhatsApp 链接, 地图
+
+### 性能测试
+- 运行 Google Lighthouse 审计 — 目标 90+ 分
+- 验证图片懒加载正常
+- 测试页面加载时间 < 3 秒
+
+### 功能测试
+- 验证所有筛选组合工作正常
+- 测试 WhatsApp 链接能否带预填消息打开
+- 测试移动端电话号码点击拨打
+- 验证 BOVAEA 信息在全站正确显示
+
+### SEO 验证
+- 检查 Meta 标签, 标题, 和 Open Graph 标签
+- 验证 Schema.org 结构化数据
+- 确认 sitemap.xml 可访问
+
+### 用户验收
+- 分享预览链接给 Oscar 收集反馈
+- 收集房源数据准确性确认

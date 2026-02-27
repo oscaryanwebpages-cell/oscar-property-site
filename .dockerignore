@@ -1,0 +1,39 @@
+# Dependencies (reinstalled in container via npm ci)
+node_modules
+
+# Build output (rebuilt in container)
+dist
+
+# Git
+.git
+.gitignore
+
+# Environment and secrets (use Cloud Run env or build-args if needed)
+.env
+.env.*
+!.env.example
+
+# IDE and OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+
+# Firebase / Cloud Functions (not needed for frontend image)
+functions
+
+# Tests and docs (not needed for production build)
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__
+coverage
+*.md
+!README.md
+
+# Keep: docker/ (nginx.conf needed in Dockerfile), package.json, source files

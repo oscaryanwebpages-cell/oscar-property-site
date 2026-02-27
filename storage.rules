@@ -1,0 +1,74 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Helper function to check if user is admin
+    function isAdmin() {
+      let adminEmails = ['oscar@oscaryan.my', 'oscaryanwebpages@gmail.com'];
+      return request.auth != null && request.auth.token.email in adminEmails;
+    }
+
+    // Helper function to validate file type
+    function isValidImage() {
+      return request.resource.contentType.matches('image/.*');
+    }
+
+    function isValidVideo() {
+      return request.resource.contentType.matches('video/.*');
+    }
+
+    function isValidAudio() {
+      return request.resource.contentType.matches('audio/.*');
+    }
+
+    // PDF and common document types for fact sheets
+    function isValidDocument() {
+      return request.resource.contentType.matches('application/pdf')
+        || request.resource.contentType.matches('application/msword')
+        || request.resource.contentType.matches('application/vnd.openxmlformats-officedocument.*');
+    }
+
+    // Helper function to validate file size (max 50MB)
+    function isValidSize() {
+      return request.resource.size < 50 * 1024 * 1024;
+    }
+
+    // Listings media files
+    match /listings/{listingId}/{type}/{fileName} {
+      // Anyone can read listing media
+      allow read: if true;
+
+      // Only admins can upload, delete
+      allow write: if isAdmin()
+        && isValidSize()
+        && (type == 'images' ? isValidImage() :
+            type == 'videos' ? isValidVideo() :
+            type == 'audio' ? isValidAudio() :
+            type == '360' ? isValidImage() : false);
+    }
+
+    // Agent profile photo
+    match /agent/profile/{fileName} {
+      // Anyone can read agent photo
+      allow read: if true;
+
+      // Only admins can upload, delete
+      allow write: if isAdmin()
+        && isValidSize()
+        && isValidImage();
+    }
+
+    // Uploads folder: fact sheets, images before assigning to a listing
+    // Use path without spaces, e.g. uploads/penang_factory/ or uploads/penangfactory/
+    match /uploads/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin()
+        && isValidSize()
+        && (isValidImage() || isValidVideo() || isValidAudio() || isValidDocument());
+    }
+
+    // Deny all other access
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

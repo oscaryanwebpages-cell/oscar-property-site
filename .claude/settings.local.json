@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(npm install)",
+      "Bash(/usr/libexec/java_home:*)",
+      "Bash(/Library/Java/JavaVirtualMachines/*/Contents/Home/bin/java:*)",
+      "Bash(/usr/bin/sudo -S bash)",
+      "Bash(export:*)",
+      "Bash(brew install:*)",
+      "Bash(source:*)",
+      "Bash(sdk install java 21.0.2-tem)",
+      "Bash(npx firebase emulators:start:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(node scripts/seed-emulator.js:*)",
+      "Bash(\"/Users/ginooh/Documents/OscarYan（property agent）/scripts/seed-emulator.js\" << 'EOF'\nimport { initializeApp } from 'firebase-admin/app';\nimport { getFirestore, collection, addDoc, serverTimestamp, connectFirestoreEmulator } from 'firebase-admin/firestore';\n\nconst app = initializeApp\\({ projectId: 'oscar-property-1cc52' }\\);\nconst db = getFirestore\\(app\\);\nconnectFirestoreEmulator\\(db, '127.0.0.1', 8080\\);\n\nconst testListings = [\n  {\n    title: \"Industrial Factory, Nibong Tebal, Penang\",\n    price: 60000000, location: \"Penang\", category: \"Industrial\", type: \"SALE\",\n    landSize: \"10.38 Acres\", tenure: \"Freehold\",\n    imageUrl: \"https://images.unsplash.com/photo-1553413077-190dd305871c\",\n    featured: true, images: [\"https://images.unsplash.com/photo-1553413077-190dd305871c\"],\n    status: \"active\", description: \"Large industrial factory with 10.38 acres.\",\n    coordinates: { lat: 5.17, lng: 100.48 }\n  },\n  {\n    title: \"Modern Office Space, Georgetown\", price: 2500000, location: \"Penang\",\n    category: \"Office\", type: \"SALE\", landSize: \"2,500 sqft\", tenure: \"Leasehold\",\n    imageUrl: \"https://images.unsplash.com/photo-14973667526719-2422d789623f\",\n    featured: true, images: [\"https://images.unsplash.com/photo-14973667526719-2422d789623f\"],\n    status: \"active\", description: \"Prime office space in Georgetown.\",\n    coordinates: { lat: 5.41, lng: 100.33 }\n  }\n];\n\nasync function seedDatabase\\(\\) {\n  console.log\\('Seeding database...'\\);\n  const listingsRef = collection\\(db, 'listings'\\);\n  for \\(const listing of testListings\\) {\n    try {\n      await addDoc\\(listingsRef, {\n        ...listing, videoUrl: null, audioUrl: null, panorama360: [],\n        propertyGuruUrl: null, iPropertyUrl: null,\n        createdAt: serverTimestamp\\(\\), updatedAt: serverTimestamp\\(\\)\n      }\\);\n      console.log\\(`+ ${listing.title}`\\);\n    } catch \\(e\\) { console.error\\(`- ${listing.title}: ${e.message}`\\); }\n  }\n  console.log\\('Done!'\\);\n  process.exit\\(0\\);\n}\nseedDatabase\\(\\);\nEOF)",
+      "Bash(lsof:*)",
+      "Bash(pip3 install:*)",
+      "Bash(playwright install:*)",
+      "Bash(python3 -m playwright install:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}

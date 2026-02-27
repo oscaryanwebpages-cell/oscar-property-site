@@ -1,0 +1,35 @@
+{
+  "name": "oscar-yan---commercial-real-estate-expert",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:functions": "cd functions && npm run build && cd .. && firebase emulators:start --only functions,storage,firestore,auth",
+    "dev:all": "cd functions && npm run build && cd .. && firebase emulators:start",
+    "deploy:local": "vite"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.8",
+    "firebase": "^12.9.0",
+    "framer-motion": "^12.34.0",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-image-gallery": "^2.0.8",
+    "react-router-dom": "^6.28.0",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "firebase-tools": "^15.6.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.9",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
