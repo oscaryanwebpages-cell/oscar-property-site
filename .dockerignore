@@ -36,4 +36,5 @@ coverage
 *.md
 !README.md
 
-# Keep: docker/ (nginx.conf needed in Dockerfile), package.json, source files
+# Older source directory (redundant as main files are at root level)
+src/
