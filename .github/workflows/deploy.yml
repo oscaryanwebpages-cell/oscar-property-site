@@ -65,10 +65,4 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy ${{ env.SERVICE_NAME }} \
-            --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/oscar-site-repo/oscar-site:latest \
-            --region ${{ env.REGION }} \
-            --platform managed \
-            --allow-unauthenticated \
-            --port 8080 \
-            --remove-secrets
+          gcloud run deploy ${{ env.SERVICE_NAME }} --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/oscar-site-repo/oscar-site:latest --region ${{ env.REGION }} --platform managed --allow-unauthenticated --port 8080 --remove-secrets --quiet
