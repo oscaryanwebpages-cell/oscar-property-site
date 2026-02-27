@@ -85,9 +85,9 @@ const AdminPanel: React.FC = () => {
     // Create the listing document first to get a real ID
     try {
       const tempListing: Omit<Listing, "id"> = {
-        title: "",
-        price: 0,
-        location: "",
+        title: "Draft Listing",
+        price: 1,
+        location: "TBD",
         category: PropertyCategory.COMMERCIAL,
         type: ListingType.SALE,
         landSize: "",
