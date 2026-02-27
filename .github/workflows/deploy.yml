@@ -5,10 +5,8 @@ on:
     branches: [ main, master ]
 
 env:
-  PROJECT_ID: oscar-property-1cc52
   SERVICE_NAME: oscar-property-site
   REGION: us-central1
-  IMAGE_NAME: gcr.io/oscar-property-1cc52/oscar-site:latest
 
 jobs:
   deploy:
@@ -22,6 +20,11 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set dynamic env
+        run: |
+          echo "PROJECT_ID=${{ steps.auth.outputs.project_id }}" >> $GITHUB_ENV
+          echo "IMAGE_NAME=gcr.io/${{ steps.auth.outputs.project_id }}/oscar-site:latest" >> $GITHUB_ENV
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
