@@ -106,13 +106,46 @@
     <link rel="preconnect" href="https://googletagmanager.com">
 
     <!-- Preload Critical CSS -->
-    <link rel="preload" href="/index.css" as="style">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
 
     <!-- Facebook Pixel noscript moved to body for Package 4 -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#001731',
+              secondary: '#0E2C48',
+              accent: '#C9A84C',
+              'accent-hover': '#B08D35',
+              surface: '#FFFFFF',
+              text: '#001731',
+              'text-muted': '#6B7280',
+              silver: '#E5E7EB',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            spacing: {
+              '18': '4.5rem',
+              '88': '22rem',
+              '128': '32rem',
+            },
+            transitionDuration: {
+              '400': '400ms',
+              '600': '600ms',
+              '800': '800ms',
+            },
+          },
+        },
+      }
+    </script>
     <style>
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
@@ -135,6 +168,7 @@
         background-size: cover;
       }
     </style>
+
   <script type="importmap">
 {
   "imports": {
@@ -148,7 +182,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-surface text-text antialiased selection:bg-accent selection:text-primary">
     <!-- Facebook Pixel noscript - Configure with actual pixel ID when ready -->
