@@ -24,7 +24,9 @@ jobs:
       - name: Set dynamic env
         run: |
           echo "PROJECT_ID=${{ steps.auth.outputs.project_id }}" >> $GITHUB_ENV
-          echo "IMAGE_NAME=gcr.io/${{ steps.auth.outputs.project_id }}/oscar-site:latest" >> $GITHUB_ENV
+          IMAGE_TAG=$(date +%Y%m%d%H%M%S)
+          echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
+          echo "IMAGE_FULL=${{ env.REGION }}-docker.pkg.dev/${{ steps.auth.outputs.project_id }}/oscar-site-repo/oscar-site:${IMAGE_TAG}" >> $GITHUB_ENV
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
@@ -49,7 +51,7 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/oscar-site-repo/oscar-site:latest
+          tags: ${{ env.IMAGE_FULL }}
           no-cache: true
           build-args: |
             VITE_FIREBASE_API_KEY=${{ secrets.VITE_FIREBASE_API_KEY }}
@@ -64,4 +66,10 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy ${{ env.SERVICE_NAME }} --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/oscar-site-repo/oscar-site:latest --region ${{ env.REGION }} --platform managed --allow-unauthenticated --port 8080 --quiet
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --image ${{ env.IMAGE_FULL }} \
+            --region ${{ env.REGION }} \
+            --platform managed \
+            --allow-unauthenticated \
+            --port 8080 \
+            --quiet
