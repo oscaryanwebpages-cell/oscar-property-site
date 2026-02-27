@@ -5,8 +5,8 @@ on:
     branches: [ main, master ]
 
 env:
-  SERVICE_NAME: oscar-property-site
-  REGION: us-central1
+  SERVICE_NAME: oscar-yan-property
+  REGION: asia-southeast1
 
 jobs:
   deploy:
@@ -32,13 +32,13 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Docker Login
-        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker asia-southeast1-docker.pkg.dev --quiet
 
       - name: Create Artifact Registry Repo (Optional)
         run: |
           gcloud artifacts repositories create oscar-site-repo \
             --repository-format=docker \
-            --location=${{ env.REGION }} \
+            --location=asia-southeast1 \
             --description="Docker repository for Cloud Run images" \
             || true
 
