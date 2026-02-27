@@ -46,22 +46,71 @@ export interface ListingExtraction {
   specifications?: Partial<ListingSpecifications>;
 }
 
+import type { DocumentData, QuerySnapshot, QueryDocumentSnapshot } from "firebase/firestore";
+
 // Firestore types for getDocs
-export type QueryDocumentData = QueryDocumentSnapshot<DocumentData, DocumentData>;
-export type QueryDocumentSnapshot = QuerySnapshot<QueryDocumentData, QueryDocumentData>;
 export type QueryDocumentData = DocumentData;
-export type QueryDocumentSnapshot = QuerySnapshot<DocumentData, DocumentData>;
+export type QueryDocumentSnapshotType = QueryDocumentSnapshot<DocumentData, DocumentData>;
+
+export interface PriceRange {
+  min: number;
+  max: number;
+}
+
+export interface DateRange {
+  listedAfter?: Date;
+  listedBefore?: Date;
+}
+
+export interface LandSizeRange {
+  min: number;
+  max: number;
+}
+
+export interface AdvancedFilterState extends FilterState {
+  priceRange?: Partial<PriceRange>;
+  dateRange?: DateRange;
+  landSizeRange?: Partial<LandSizeRange>;
+}
+
+export interface ListingStats {
+  listingId: string;
+  totalViews: number;
+  totalClicks: number;
+  lastViewedAt: Date;
+}
+
+export interface AgentStats {
+  totalListings: number;
+  activeListings: number;
+  dealsClosed: number;
+  responseRate: number;
+  averageResponseTime?: number;
+}
+
+export interface PopularListing {
+  listing: Listing;
+  viewCount: number;
+  rank: number;
+}
+
+export interface SearchAnalytics {
+  searchTerm: string;
+  frequency: number;
+  lastSearched: Date;
+  filters: AdvancedFilterState;
+}
 
 // getDocs function return type
 export interface GetDocsResponse {
-  data: QueryDocumentSnapshot<DocumentData, DocumentData> | null;
+  data: QuerySnapshot<DocumentData, DocumentData> | null;
   hasMore: boolean;
   nextPageCursor: string | null;
 }
 
 // Function signature for getDocs
 export interface GetDocsFunction {
-  (q: string): GetDocsResponse;
+  (q: string): Promise<GetDocsResponse>;
 }
 
 export type ListingStatus = "active" | "inactive" | "sold";
