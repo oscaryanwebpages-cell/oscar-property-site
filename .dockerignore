@@ -36,5 +36,3 @@ coverage
 *.md
 !README.md
 
-# Older source directory (redundant as main files are at root level)
-src/
