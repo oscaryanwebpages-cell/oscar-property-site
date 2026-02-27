@@ -35,7 +35,7 @@ RUN VITE_FIREBASE_API_KEY=${VITE_FIREBASE_API_KEY} \
     VITE_FIREBASE_MEASUREMENT_ID=${VITE_FIREBASE_MEASUREMENT_ID} \
     VITE_GOOGLE_MAPS_API_KEY=${VITE_GOOGLE_MAPS_API_KEY} \
     VITE_ADMIN_EMAIL=${VITE_ADMIN_EMAIL} \
-    npm run build
+    npm run build > build.log 2>&1 || (cat build.log && exit 1)
 
 # Stage 2: Production image with nginx
 FROM nginx:alpine AS production
