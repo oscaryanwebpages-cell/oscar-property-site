@@ -30,7 +30,19 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Docker Login
-        run: gcloud auth configure-docker gcr.io --quiet
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+
+      - name: Enable APIs
+        run: |
+          gcloud services enable artifactregistry.googleapis.com
+
+      - name: Create Artifact Registry Repo
+        run: |
+          gcloud artifacts repositories create cloud-run-source-deploy \
+            --repository-format=docker \
+            --location=${{ env.REGION }} \
+            --description="Docker repository for Cloud Run images" \
+            || true
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -41,7 +53,7 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: ${{ env.IMAGE_NAME }}
+          tags: ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/cloud-run-source-deploy/oscar-site:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
@@ -58,7 +70,7 @@ jobs:
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy ${{ env.SERVICE_NAME }} \
-            --image ${{ env.IMAGE_NAME }} \
+            --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/cloud-run-source-deploy/oscar-site:latest \
             --region ${{ env.REGION }} \
             --platform managed \
             --allow-unauthenticated \
