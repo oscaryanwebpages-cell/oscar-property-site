@@ -18,8 +18,11 @@ const Footer: React.FC = () => {
                 <span className="text-[10px] text-accent uppercase tracking-wider font-semibold">{AGENT_PROFILE.regNo}</span>
               </div>
             </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
+              "Connecting Investors with Johor’s Best Industrial Properties"
+            </p>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Your trusted partner in navigating Malaysia's commercial real estate landscape. Delivering fairness, integrity, and exceptional results.
+              Your trusted partner in navigating Malaysia's commercial real estate landscape. Delivering professional advisory and successful transactions.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-accent transition-colors"><Facebook size={20} /></a>

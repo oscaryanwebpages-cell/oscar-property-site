@@ -1,23 +1,28 @@
 import React from 'react';
-import { ShieldCheck, Scale, HeartHandshake } from 'lucide-react';
+import { MapPin, Users, Briefcase, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   const values = [
     {
+      icon: MapPin,
+      title: 'Specialized in Johor Industrial Properties',
+      description: 'Focused exclusively on high-value industrial assets across the Johor Bahru region.',
+    },
+    {
+      icon: Users,
+      title: 'Strong Network with Owners & Developers',
+      description: 'Direct access to key stakeholders and premium off-market opportunities.',
+    },
+    {
+      icon: Briefcase,
+      title: 'Experienced in High Value Transactions',
+      description: 'Proven track record of managing complex, large-scale commercial real estate deals.',
+    },
+    {
       icon: ShieldCheck,
-      title: 'Integrity',
-      description: 'Transparent dealings and honest advice. Your trust is the most valuable asset in every transaction.',
-    },
-    {
-      icon: Scale,
-      title: 'Fairness',
-      description: 'Striving for win-win outcomes where both buyers and sellers feel valued and respected.',
-    },
-    {
-      icon: HeartHandshake,
-      title: 'Courtesy',
-      description: 'Professionalism with a personal touch. We value your time and prioritize your specific requirements.',
+      title: 'Trusted by Investors and Corporate Buyers',
+      description: 'Delivering professional advisory and successful outcomes for discerning clients.',
     },
   ];
 
@@ -32,17 +37,37 @@ const About: React.FC = () => {
           className="max-w-3xl mx-auto text-center mb-12 md:mb-16"
         >
           <span className="text-accent font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 block">
-            Our Philosophy
+            About Oscar Yan
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-primary font-bold mb-4 sm:mb-6">
-            Driven by Integrity, Defined by Results
+          <h2 className="font-serif text-3xl sm:text-4xl text-primary font-bold mb-6">
+            Commercial Real Estate Advisor
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed px-4">
-            With over 8 years of dedicated service in the commercial sector, I help businesses and investors find the perfect foundation for their growth. My practice is built on three non-negotiable pillars.
-          </p>
+          <div className="text-gray-600 text-base sm:text-lg leading-relaxed px-4 space-y-4">
+            <p>
+              Oscar Yan is a commercial real estate advisor specializing in industrial properties across Johor Bahru.
+            </p>
+            <p>
+              He focuses on factory, warehouse, and industrial land transactions, assisting investors, corporations, and developers in identifying strategic opportunities and securing high-value assets.
+            </p>
+            <p>
+              With deep market knowledge and a trusted network within the industry, Oscar is committed to delivering professional advisory and successful transactions for his clients.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-3xl mx-auto text-center mb-12"
+        >
+          <h2 className="font-serif text-3xl sm:text-4xl text-primary font-bold mb-6">
+            Why Work With Oscar
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {values.map((value, index) => (
             <motion.div
               key={value.title}

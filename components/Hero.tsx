@@ -44,15 +44,21 @@ const Hero: React.FC = () => {
               <span className="inline-block py-1 px-3 border border-accent/30 rounded-full bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase mb-6">
                 BOVAEA Registered • {AGENT_PROFILE.regNo}
               </span>
-              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-                Trusted <span className="text-accent">Commercial</span> <br />
-                Real Estate Expert
+              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+                Johor <span className="text-accent">Industrial</span> <br />
+                Property Specialist
               </h1>
-              <p className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto md:mx-0 mb-10 font-light leading-relaxed">
-                Specializing in high-value industrial, commercial, and land
-                acquisitions across Johor Bahru. Elevating your business
-                portfolio with integrity and precision.
-              </p>
+              <h2 className="text-xl md:text-2xl font-medium text-white/90 mb-6 tracking-wide drop-shadow-md">
+                Factories • Industrial Land • Investment Opportunities
+              </h2>
+              <div className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto md:mx-0 mb-10 font-light leading-relaxed space-y-4">
+                <p>
+                  Advising investors, developers and corporations on strategic acquisitions of factories, industrial land and commercial assets across Johor Bahru.
+                </p>
+                <p>
+                  With strong market insight and extensive industry connections, Oscar helps clients secure high-value industrial properties with confidence and precision.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a

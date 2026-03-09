@@ -298,10 +298,10 @@ const ListingsGrid = forwardRef<ListingsGridRef>((props, ref) => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
             <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">
-              Premium Properties
+              Factories • Industrial Land • Warehouses • Investment Opportunities
             </span>
             <h2 className="font-serif text-4xl text-primary font-bold">
-              Featured Listings
+              Featured Industrial Properties
             </h2>
           </div>
 
@@ -309,21 +309,19 @@ const ListingsGrid = forwardRef<ListingsGridRef>((props, ref) => {
           <div className="bg-white p-1 rounded-md shadow-sm inline-flex">
             <button
               onClick={() => setListingType(ListingType.SALE)}
-              className={`px-6 py-2 rounded-sm text-sm font-bold transition-all ${
-                listingType === ListingType.SALE
+              className={`px-6 py-2 rounded-sm text-sm font-bold transition-all ${listingType === ListingType.SALE
                   ? "bg-primary text-white shadow-md"
                   : "text-gray-500 hover:text-primary"
-              }`}
+                }`}
             >
               For Sale
             </button>
             <button
               onClick={() => setListingType(ListingType.RENT)}
-              className={`px-6 py-2 rounded-sm text-sm font-bold transition-all ${
-                listingType === ListingType.RENT
+              className={`px-6 py-2 rounded-sm text-sm font-bold transition-all ${listingType === ListingType.RENT
                   ? "bg-primary text-white shadow-md"
                   : "text-gray-500 hover:text-primary"
-              }`}
+                }`}
             >
               For Rent
             </button>
@@ -478,11 +476,10 @@ const ListingsGrid = forwardRef<ListingsGridRef>((props, ref) => {
                         <button
                           key={preset}
                           onClick={() => applyDateRange(preset)}
-                          className={`px-3 py-1.5 text-sm rounded-sm transition-colors ${
-                            datePreset === preset
+                          className={`px-3 py-1.5 text-sm rounded-sm transition-colors ${datePreset === preset
                               ? "bg-accent text-white"
                               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                          }`}
+                            }`}
                         >
                           {preset}
                         </button>
@@ -530,11 +527,10 @@ const ListingsGrid = forwardRef<ListingsGridRef>((props, ref) => {
                         <button
                           key={preset}
                           onClick={() => applyLandSizeRange(preset)}
-                          className={`px-3 py-1.5 text-sm rounded-sm transition-colors ${
-                            sizePreset === preset
+                          className={`px-3 py-1.5 text-sm rounded-sm transition-colors ${sizePreset === preset
                               ? "bg-accent text-white"
                               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                          }`}
+                            }`}
                         >
                           {preset}
                         </button>
