@@ -41,11 +41,11 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block py-1 px-3 border border-accent/30 rounded-full bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase mb-6">
+              <span className="inline-block py-1 px-3 border border-blue-300/40 rounded-full bg-blue-600/20 text-blue-100 text-xs font-bold tracking-widest uppercase mb-6">
                 BOVAEA Registered • {AGENT_PROFILE.regNo}
               </span>
               <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
-                Johor <span className="text-accent">Industrial</span> <br />
+                Johor <span className="text-blue-300">Industrial</span> <br />
                 Property Specialist
               </h1>
               <h2 className="text-xl md:text-2xl font-medium text-white/90 mb-6 tracking-wide drop-shadow-md">
@@ -89,22 +89,18 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative mx-auto w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]"
             >
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-full h-full border-2 border-accent/30 rounded-full translate-x-4 -translate-y-4"></div>
-              <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
-                <img
-                  src={AGENT_PROFILE.photoUrl}
-                  alt={AGENT_PROFILE.name}
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-              </div>
+              <img
+                src={AGENT_PROFILE.photoUrl}
+                alt={AGENT_PROFILE.name}
+                className="w-full h-full object-contain drop-shadow-2xl scale-[1.08] origin-bottom"
+                loading="eager"
+              />
 
               {/* Badge */}
               <div className="absolute bottom-10 left-0 bg-surface px-6 py-4 rounded-sm shadow-xl flex items-center gap-4 animate-bounce-slow border-l-4 border-accent">
                 <div className="flex flex-col">
                   <span className="text-primary font-serif font-bold text-2xl">
-                    8+
+                    {AGENT_PROFILE.yearsExperience}+
                   </span>
                   <span className="text-text-muted text-xs uppercase tracking-wider font-semibold">
                     Years Exp.

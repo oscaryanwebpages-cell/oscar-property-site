@@ -153,6 +153,7 @@ export interface AgentProfile {
   yearsExperience: number;
   listingsCount: number;
   dealsClosed: number;
+  annualTransactionVolume: string;
 }
 
 export interface FilterState {

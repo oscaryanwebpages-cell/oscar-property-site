@@ -1,7 +1,7 @@
 import { AgentProfile, Listing, ListingType, PropertyCategory } from "./types";
 
 export const LOGO_URL =
-  "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage%20(1).png?alt=media&token=ec453883-e8cc-42c0-8bd9-f52c06c41ff4";
+  "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage(1).png?alt=media&token=15102a56-3178-4e2c-a441-c7f2c5f25736";
 
 export const WHATSAPP_ICON_URL =
   "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage.svg?alt=media&token=ed678968-afbd-4d98-875c-182cad15b6ba";
@@ -18,10 +18,11 @@ export const AGENT_PROFILE: AgentProfile = {
   phone: "+6012-345-6789",
   email: "oscar.yan@newbob.com.my",
   photoUrl:
-    "https://my1-cdn.pgimgs.com/agent/664037/APHO.183372883.R550X550.jpg",
-  yearsExperience: 8,
+    "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2Fexport.png?alt=media&token=ac698551-e351-4de1-a559-f77d4eea9081",
+  yearsExperience: 11,
   listingsCount: 81,
-  dealsClosed: 150,
+  dealsClosed: 300,
+  annualTransactionVolume: "1B+",
 };
 
 export const LISTINGS: Listing[] = [

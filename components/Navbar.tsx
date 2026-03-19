@@ -43,11 +43,13 @@ const Navbar: React.FC = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <img
-            src={LOGO_URL}
-            alt="Oscar Yan"
-            className="h-12 md:h-14 w-auto object-contain"
-          />
+          <div className="h-12 md:h-14 max-w-[220px] md:max-w-[280px] flex items-center shrink-0">
+            <img
+              src={LOGO_URL}
+              alt="Oscar Yan"
+              className="h-full w-auto max-w-full object-contain block"
+            />
+          </div>
         </a>
 
         {/* Desktop Menu */}

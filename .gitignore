@@ -41,3 +41,6 @@ firestore-debug.log*
 
 # OS
 Thumbs.db
+
+# Local Cache
+.npm-cache/
