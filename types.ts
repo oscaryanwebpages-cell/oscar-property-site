@@ -146,7 +146,7 @@ export interface AgentProfile {
   title: string;
   agency: string;
   regNo: string;
-  agencyLicense: string;
+  agencyLicense?: string; // Optional per user request
   phone: string;
   email: string;
   photoUrl: string;
@@ -154,6 +154,10 @@ export interface AgentProfile {
   listingsCount: number;
   dealsClosed: number;
   annualTransactionVolume: string;
+  chineseName?: string;
+  companyPhone?: string;
+  website?: string;
+  address?: string;
 }
 
 export interface FilterState {

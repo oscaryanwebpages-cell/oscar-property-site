@@ -10,19 +10,21 @@ export const HERO_BACKGROUND_URL =
   "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2F%E5%B7%A5%E4%B8%9A%E5%9B%AD%E5%8C%BA%E8%83%8C%E6%99%AF_%E9%80%82%E9%85%8D%E7%BD%91%E9%A1%B5.jpg?alt=media&token=59e982e0-4bfb-4df0-bfd7-c79998e6c7c3";
 
 export const AGENT_PROFILE: AgentProfile = {
-  name: "Oscar Yan",
-  title: "Senior Real Estate Negotiator",
-  agency: "New Bob Realty Sdn Bhd",
+  name: "甄显杰 Oscar Yan",
+  title: "Million Dollar Negotiator / Senior Negotiator",
+  agency: "ACZEON PROPERTIES (诚信地产)",
   regNo: "REN 08414",
-  agencyLicense: "E (1) 0232",
-  phone: "+6012-345-6789",
-  email: "oscar.yan@newbob.com.my",
+  phone: "018-7833 766",
+  email: "oscar.aczeon@gmail.com",
   photoUrl:
     "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2Fexport.png?alt=media&token=ac698551-e351-4de1-a559-f77d4eea9081",
   yearsExperience: 11,
   listingsCount: 81,
   dealsClosed: 300,
   annualTransactionVolume: "1B+",
+  companyPhone: "+607-595 2452",
+  website: "www.aczeonproperties.com",
+  address: "No.9, (1st Floor), Jalan Persiaran Skudai 8, Pusat Perusahaan Skudai 8, 81300 Skudai, Johor",
 };
 
 export const LISTINGS: Listing[] = [

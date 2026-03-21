@@ -1,6 +1,6 @@
 import React from 'react';
 import { AGENT_PROFILE } from '../constants';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Globe } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -51,17 +51,29 @@ const Footer: React.FC = () => {
                 <MapPin size={18} className="text-accent shrink-0 mt-0.5" />
                 <span>
                   {AGENT_PROFILE.agency} <br />
-                  Johor Bahru, Johor, Malaysia
+                  {AGENT_PROFILE.address || "Johor Bahru, Johor, Malaysia"}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-accent shrink-0" />
                 <a href={`tel:${AGENT_PROFILE.phone}`} className="hover:text-white transition-colors">{AGENT_PROFILE.phone}</a>
               </li>
+              {AGENT_PROFILE.companyPhone && (
+                <li className="flex items-center gap-3">
+                  <Phone size={18} className="text-accent shrink-0" />
+                  <a href={`tel:${AGENT_PROFILE.companyPhone}`} className="hover:text-white transition-colors">{AGENT_PROFILE.companyPhone} (Office)</a>
+                </li>
+              )}
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-accent shrink-0" />
                 <a href={`mailto:${AGENT_PROFILE.email}`} className="hover:text-white transition-colors">{AGENT_PROFILE.email}</a>
               </li>
+              {AGENT_PROFILE.website && (
+                <li className="flex items-center gap-3">
+                  <Globe size={18} className="text-accent shrink-0" />
+                  <a href={`https://${AGENT_PROFILE.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{AGENT_PROFILE.website}</a>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -72,10 +84,12 @@ const Footer: React.FC = () => {
               <p className="text-xs text-gray-300 font-medium">BOVAEA Registered Estate Negotiator</p>
               <p className="text-accent font-bold text-sm mt-1">{AGENT_PROFILE.regNo}</p>
             </div>
-            <div className="p-4 bg-white/5 rounded-sm border border-white/10">
-              <p className="text-xs text-gray-300 font-medium">Agency License</p>
-              <p className="text-accent font-bold text-sm mt-1">{AGENT_PROFILE.agencyLicense}</p>
-            </div>
+            {AGENT_PROFILE.agencyLicense && (
+              <div className="p-4 bg-white/5 rounded-sm border border-white/10">
+                <p className="text-xs text-gray-300 font-medium">Agency License</p>
+                <p className="text-accent font-bold text-sm mt-1">{AGENT_PROFILE.agencyLicense}</p>
+              </div>
+            )}
           </div>
         </div>
 
