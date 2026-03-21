@@ -10,9 +10,11 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center text-primary font-serif font-bold text-xl">
-                O
-              </div>
+              <img 
+                src="https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage(1).png?alt=media&token=15102a56-3178-4e2c-a441-c7f2c5f25736" 
+                alt="Logo" 
+                className="w-10 h-10 object-contain rounded-sm"
+              />
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-lg leading-tight">{AGENT_PROFILE.name}</span>
                 <span className="text-[10px] text-accent uppercase tracking-wider font-semibold">{AGENT_PROFILE.regNo}</span>
