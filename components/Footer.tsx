@@ -1,5 +1,5 @@
 import React from 'react';
-import { AGENT_PROFILE } from '../constants';
+import { AGENT_PROFILE, LOGO_URL } from '../constants';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Globe } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage(1).png?alt=media&token=15102a56-3178-4e2c-a441-c7f2c5f25736" 
+                src={LOGO_URL} 
                 alt="Logo" 
                 className="w-10 h-10 object-contain rounded-sm"
               />

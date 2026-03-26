@@ -1,7 +1,7 @@
 import { AgentProfile, Listing, ListingType, PropertyCategory } from "./types";
 
 export const LOGO_URL =
-  "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage(1).png?alt=media&token=15102a56-3178-4e2c-a441-c7f2c5f25736";
+  "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FWhatsApp_Image_2026-03-17_at_14.48.33-removebg-preview.png?alt=media&token=4abbcc38-1f36-4374-a838-4c6098b942bb";
 
 export const WHATSAPP_ICON_URL =
   "https://firebasestorage.googleapis.com/v0/b/oscar-property-1cc52.firebasestorage.app/o/main%20page%2FImage.svg?alt=media&token=ed678968-afbd-4d98-875c-182cad15b6ba";
